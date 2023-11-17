@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+service Service1 {
+  rpc ListenAndSend (Request) returns (Response) {}
+}
+
+service Service2 {
+  rpc ExecuteRoutine (Request) returns (Response) {}
+}
+
+message Request {
+  string info = 1;
+}
+
+message Response {
+  string result = 1;
+}
