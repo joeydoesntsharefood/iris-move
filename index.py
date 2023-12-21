@@ -58,8 +58,6 @@ class Service2(services_pb2_grpc.Service2Servicer):
 
         destinyId = utils.createMissingFolders(service, DESTINY_FOLDER, path)
 
-        print(f'Pasta destino: {destinyId}')
-
         conditional = utils.haveItem(service, destinyId, data['name'], json_string['mimeType'])
 
         if conditional:
